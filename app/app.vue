@@ -2,23 +2,30 @@
   <div class="app">
     <div class="page">
       <div class="panel">
-        <div class="panel-block">
+        <input type="text" class="panel-block" placeholder="search">
+      </div>
+          <div class="level">
           <div class="results">
+            <div class="level-left">
             <ul class="track">
-              <p class="track__media"></p>
+              <span><span class="track__media"></span></span>
               <img src="#" alt="" class="track__frame">
-              <h5 class="track__artist"></h5>
-              <p class="track__name"></p>
+              <span class="track__artist"></span>
+              <span class="track__name"></span>
             </ul>
           </div>
+          <div class="level-right">
+            <span class="level-item" class="fa fa-spotify" aria-hidden="true"></span>
+          </div>
+          </div>
+        </div>
         </div>
 
 
 
 
-      </div>
+
     </div>
-  </div>
 </template>
 
 <script>
