@@ -10,11 +10,11 @@
             <div class="media is-fullwidth">
             <div class="media-left">
               <img src="http://vignette2.wikia.nocookie.net/coheed/images/8/8e/The_Afterman_Descension_album_cover.jpg/revision/20130117201415" alt=""
-              class="track__frame">{{track.frame}}</div>
+              class="track__frame">{{tracks.frame}}</div>
               <div class="media-content">
 
-              <div class="track__artist">{{track.artist}}</div>
-              <div class="track__name">{{track.name}}</div>
+              <div class="track__artist">{{tracks.artist}}</div>
+              <div class="track__name">{{tracks.name}}</div>
               <SongItem v-for="item in list" v-bind:repo="item"></SongItem>
 
             </div>
@@ -46,14 +46,14 @@ export default {
   created() {
     fetch('https://api.spotify.com/v1/search?query=katy&type=track&offset=0&limit=20')
     .then(t => t.json())
-    .then((track) => {
-      this.list = track;
+    .then((tracks) => {
+      this.list = tracks;
     });
   },
 
   data() {
     return {
-      track: {
+      tracks: {
 
       },
 
